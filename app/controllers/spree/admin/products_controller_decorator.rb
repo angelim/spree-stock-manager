@@ -1,7 +1,11 @@
 Spree::Admin::ProductsController.class_eval do
+   helper 'spree/products'
    before_filter :load_data, :only => :stock
    
   def stock
-    @products = Spree::Product.all
+    respond_with(@collection) do |format|
+      format.html
+      format.json { render :json => json_data }
+    end
   end
 end
