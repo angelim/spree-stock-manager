@@ -16,7 +16,7 @@
     <th><%= t('.in_stock') %></th>	
   </tr>
 <% @products.each do |product| %>
-  <tr <%= "style='color: red;'" unless product.has_stock? %> id="<%= spree_dom_id product %>" data-hook="admin_products_index_rows">
+  <tr <%= "style='color: red;'" unless product.has_stock? %> id="<%= dom_id product %>" data-hook="admin_products_index_rows">
     <td><%= product.sku rescue '' %></td>
     <td><%= link_to product.try(:name), edit_admin_product_path(product) %></td>
     <td><%= product.on_hand %></td>	
