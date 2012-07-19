@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_stock_manager'
-  s.version     = '1.1.0'
+  s.version     = '1.1.1'
   s.summary     = 'Spree Stock Manager Extension'
   s.description = 'The stock manager extension, add a tab to manage stocks in the admin products part of your spree website'
   s.required_ruby_version = '>= 1.8.7'
